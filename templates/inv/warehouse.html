@@ -2,14 +2,22 @@
 
 
 {% block content %}
-{% load static %} 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <h1>Warehouse: {{ wh.warehouse_name }}</h1>
+{% load static %}
+  <div class="media">
+  <img class="mr-3"
+  src="{% static 'inv/img/'|add:wh.warehouse_img %}"
+  alt="Photo of warehouse {{ wh.warehouse_id }}"
+  caption="Warehouse {{ wh.warehouse_id }} | {{ wh.warehouse_name }}"
+  height="300px"/>
+  <div class="media-body">
+  <h1 class="m1-0">Warehouse: {{ wh.warehouse_name }}</h1>
   <p class="lead">This warehouse is located at {{ wh.warehouse_loc }}.</p>
+</div>
+</div>
   <div class="row mb-3">
     {% for b in boxes %}
         <div class="col-md-4 themed-grid-col">
-    
+
 
       <div class="card mb-4 border-dark">
         <img class="card-img-top" src="{% static 'inv/img/'|add:b.box_img %}" alt="Box Designator">
@@ -27,5 +35,5 @@
         {% endfor %}
   </div>
 
-  
+
 {% endblock %}
