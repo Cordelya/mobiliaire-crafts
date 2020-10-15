@@ -5,6 +5,8 @@ A lightweight property inventory helper
 
 *built for/on Django 3.1*
 
+[Changelog](https://github.com/Cordelya/mobiliaire#Changelog)
+
 This self-hosted app is for assisting SCA branches in managing both annual inventories and pack-in/pack-out at events. It is designed to be installed on a portable machine - to be taken to events and serve up web pages with inventory information without needing access to the Internet. A [$35 Raspberry Pi](https://www.raspberrypi.org/products/) fits the bill nicely here, but take my advice and spend the extra $10 for a [case](https://www.raspberrypi.org/products/raspberry-pi-4-case/) if you go that route. A tablet with Termux or a similar application may work as well (tested on a Samsung Galaxy Note 8).
 
 There is now [a fork of this repository just for Raspberry Pi](https://github.com/Cordelya/mobiliaire-raspi) that includes support for submitting new photos via [picamera](https://github.com/waveform80/picamera).
@@ -70,3 +72,16 @@ $ ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.jso
  ~~~~
  
 This app is built on the well-established and well-documented Django framework. If you're not sure how to do something, try checking the Django documentation pages first.
+
+# Changelog #
+## Version 1.0.1 released October 15, 2020
+* Unification of template styling so that warehouse/box and warehouses/boxes/items appear the same. 
+* Keyword view styling updated. 
+* Items.html keyword filtering styling changed. 
+* "Missing photo" placeholder styling changed in several locations.
+* index.html total value calculation in views.py corrected
+* index.js updated, splitting DataTables initializer into two views, t1 and t2. Currently, t1 is applied to all reports tables, and t-2 is applied to the table on the consumables page - to facilitate showing the dt-SearchBuilder extension for smarter filtering.
+* index.js updated to reflect element changes in items.html (from `<li>` to `<button>`)
+
+## Version 1.0 released October 5, 2020
+* Initial Stable Release incorporating all work since project started.
