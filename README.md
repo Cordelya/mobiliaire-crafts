@@ -81,7 +81,7 @@ This app is built on the well-established and well-documented Django framework. 
 * "Missing photo" placeholder styling changed in several locations.
 * index.html total value calculation in views.py corrected
 * index.js updated, splitting DataTables initializer into two views, t1 and t2. Currently, t1 is applied to all reports tables, and t-2 is applied to the table on the consumables page - to facilitate showing the dt-SearchBuilder extension for smarter filtering.
-* index.js updated to reflect element changes in items.html (from <li> to <button>)
+* index.js updated to reflect element changes in items.html (from `<li>` to `<button>`)
 
 ## Version 1.0 released October 5, 2020
 * Initial Stable Release incorporating all work since project started.
