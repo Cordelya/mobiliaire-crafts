@@ -10,7 +10,7 @@ This self-hosted app is a fork of [Mobiliaire](https://github.com/Cordelya/mobil
 Want to try it out? 
 
 ````
-$ git clone https://github.com/Cordelya/mobiliaire.git
+$ git clone https://github.com/Cordelya/mobiliaire-crafts.git
 ````
 [See a more detailed procedure.](https://github.com/Cordelya/mobiliaire/wiki/getStarted)
 
