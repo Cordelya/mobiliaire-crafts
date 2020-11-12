@@ -21,10 +21,12 @@ This README will only cover features that are unique to this fork. Please also s
 
 (I/N) = Implemented, Not Implemented (Yet)
 
-* (N) Binary flags: is_pattern and is_yardage to allow for some major item-type differentiation.
-* (N) Photo support for Pattern envelopes: set the pattern front photo as your main item photo, and insert the envelope rear photo into the appropriate field. Click on a pattern front image in the gallery and a javascript modal will pop up with the envelope reverse.
-* (N) Pattern publisher and numbering support: For items which are patterns, additional optional fields are available allowing you to record the pattern's publisher, pattern number, and year of publication (because commercial pattern manufacturers reuse pattern numbers). Pattern Manufacturers are FK related to prevent spelling differences that could improperly exclude records in search results. If pattern count > 0, separate pattern count and value totals will be displayed where system totals are displayed.
-* (N) Support for yardage: Quantity allows partial amounts. If total fabric yardage is > 0, separate yardage and value totals will be displayed where system totals are displayed.
+* (I) Binary flags: is_pattern and is_yardage to allow for some major item-type differentiation.
+* (I) Photo support for Pattern envelopes: set the pattern front photo as your main item photo, and insert the envelope rear photo into the appropriate field. 
+* (I) Click on a pattern front image in the gallery and a javascript modal will pop up with the envelope reverse.
+  * (N) If pattern count > 0, separate pattern count and value totals will be displayed where system totals are displayed.
+* (I) Support for yardage: Quantity allows partial amounts. 
+  * (N) If total fabric yardage is > 0, separate yardage and value totals will be displayed where system totals are displayed.
 
 This app is built on the well-established and well-documented Django framework. If you're not sure how to do something, try checking the Django documentation pages first.
 
