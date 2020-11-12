@@ -35,6 +35,13 @@ class Boxes(models.Model):
     def __str__(self):
         return '%s) %s' % (self.box_id, self.box_name)
 
+class PatternPub(models.Model):
+    pub_id = models.AutoField(primary_key=True)
+    pub_name = models.CharField(max_length=50)
+    class Meta: verbose_name_plural = "Pattern Publishers"
+    def __str__(self):
+        return '%s) %s' % (self.pub_id, self.pub_name)
+
 class Items(models.Model):
     item_id = models.AutoField(primary_key=True)
     item_name = models.CharField(max_length=50, default='name')
@@ -52,6 +59,14 @@ class Items(models.Model):
             MinValueValidator(0)
         ]
             )
+
+    item_is_yardage = models.BooleanField(default=False)
+    item_is_pattern = models.BooleanField(default=False)
+    item_yardage = models.DecimalField(max_digits=10, decimal_places=4, blank=True, null=True)
+    item_img_patternback = models.CharField(max_length=50, blank=True, null=True)
+    item_pattern_pub = models.ForeignKey(PatternPub, on_delete=models.CASCADE, related_name="publisher", blank=True, null=True)
+    item_pattern_id = models.CharField(max_length=25, blank=True, null=True)
+    item_pattern_size = models.CharField(max_length=15, blank=True, null=True)
 
     class Meta: verbose_name_plural = "Items"
     def __str__(self):

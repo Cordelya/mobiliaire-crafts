@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Warehouse, Staff, Boxes, Items, Items_in_boxes, Keywords, Keywords_in_items, Inventory
+from . models import Warehouse, Staff, Boxes, Items, Items_in_boxes, Keywords, Keywords_in_items, Inventory, PatternPub
 
 class WarehouseInLine(admin.TabularInline):
     model = Boxes
@@ -44,6 +44,10 @@ class KeywordsAdmin(admin.ModelAdmin):
     list_display = ('keyword', 'keyword_desc', 'keyword_slug')
     extra = 1
 
+class PatternPubAdmin(admin.ModelAdmin):
+    model = PatternPub
+    list_display = ('pub_name')
+
 admin.site.register(Warehouse, WarehouseAdmin)
 admin.site.register(Staff, StaffAdmin)
 admin.site.register(Boxes, BoxesAdmin)
@@ -52,7 +56,6 @@ admin.site.register(Items_in_boxes, Items_in_boxesAdmin)
 admin.site.register(Keywords, KeywordsAdmin)
 admin.site.register(Keywords_in_items, Keywords_itemsAdmin)
 admin.site.register(Inventory)
-
-
+admin.site.register(PatternPub)
 
 # Register your models here.
